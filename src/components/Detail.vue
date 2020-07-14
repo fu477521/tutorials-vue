@@ -33,7 +33,7 @@
 
 <script>
   import marked from 'marked'
-import {getPost, getNote, getArticle} from '../api/api'
+import {getArticle} from '../api/api'
 
 export default {
   name: 'detail',
@@ -55,28 +55,28 @@ export default {
   methods: {
     getData (id) {
       var site_type = this.$route.matched[0].path
-      if (site_type==='/blogs') {
-        getPost(id).then((response) => {
-          // console.log(response.data)
-          this.articleData = response.data.result
-          this.nextData = response.data.next || {'id': 0, 'title': '没有下一篇了'}
-          this.previousData = response.data.previous || {'id': 0, 'title': '没有上一篇了'}
-        })
-          .catch(function (error) {
-            console.log(error)
-          })
-      }
-      if (site_type==='/forums') {
-        getNote(id).then((response) => {
-          console.log(response.data)
-          this.articleData = response.data.result
-          this.nextData = response.data.next || {'id': 0, 'title': '没有下一篇了'}
-          this.previousData = response.data.previous || {'id': 0, 'title': '没有上一篇了'}
-        })
-          .catch(function (error) {
-            console.log(error)
-          })
-      }
+      // if (site_type==='/blogs') {
+      //   getPost(id).then((response) => {
+      //     // console.log(response.data)
+      //     this.articleData = response.data.result
+      //     this.nextData = response.data.next || {'id': 0, 'title': '没有下一篇了'}
+      //     this.previousData = response.data.previous || {'id': 0, 'title': '没有上一篇了'}
+      //   })
+      //     .catch(function (error) {
+      //       console.log(error)
+      //     })
+      // }
+      // if (site_type==='/forums') {
+      //   getNote(id).then((response) => {
+      //     console.log(response.data)
+      //     this.articleData = response.data.result
+      //     this.nextData = response.data.next || {'id': 0, 'title': '没有下一篇了'}
+      //     this.previousData = response.data.previous || {'id': 0, 'title': '没有上一篇了'}
+      //   })
+      //     .catch(function (error) {
+      //       console.log(error)
+      //     })
+      // }
       if (site_type==='/tutorials') {
         getArticle(id).then((response) => {
           console.log(response.data)

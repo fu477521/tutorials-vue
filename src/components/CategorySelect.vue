@@ -29,7 +29,7 @@
 </template>
 
 <script>
-import { getTutorialsCategory, getBlogsCategory, getForumsCategory } from '../api/api'
+import { getTutorialsCategory} from '../api/api'
 export default {
   name: 'Category.vue',
   props: {
@@ -86,29 +86,29 @@ export default {
     },
     getTotalCategory () { // 获取菜单
       var site_type = this.$route.matched[0].path
-      if (site_type === '/blogs') {
-        getBlogsCategory({
-          params: {}
-        }).then((response) => {
-          console.log(response)
-          this.categoryData1List = response.data
-        })
-          .catch(function (error) {
-            console.log(error)
-          })
-      }
-      else if (site_type === '/forums') {
-        getForumsCategory({
-          params: {}
-        }).then((response) => {
-          console.log(response)
-          this.categoryData1List = response.data
-        })
-          .catch(function (error) {
-            console.log(error)
-          })
-      }
-      else if (site_type === '/tutorials') {
+      // if (site_type === '/blogs') {
+      //   getBlogsCategory({
+      //     params: {}
+      //   }).then((response) => {
+      //     console.log(response)
+      //     this.categoryData1List = response.data
+      //   })
+      //     .catch(function (error) {
+      //       console.log(error)
+      //     })
+      // }
+      // else if (site_type === '/forums') {
+      //   getForumsCategory({
+      //     params: {}
+      //   }).then((response) => {
+      //     console.log(response)
+      //     this.categoryData1List = response.data
+      //   })
+      //     .catch(function (error) {
+      //       console.log(error)
+      //     })
+      // }
+      if (site_type === '/tutorials') {
         getTutorialsCategory({
           params: {is_nested: true}
         }).then((response) => {

@@ -22,6 +22,7 @@
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.12.1",
     "@vue/cli-service": "^3.12.1",
+    "compression-webpack-plugin": "^4.0.0",
     "vue-markdown-highlight": "^1.0.5",
     "vue-template-compiler": "^2.6.11"
   },

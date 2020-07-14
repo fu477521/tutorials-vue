@@ -1,6 +1,9 @@
 <template>
   <div class="container">
-    <tutorial-sidebar v-bind:isMarkdown="false"></tutorial-sidebar>
+    <keep-alive>
+      <tutorial-sidebar class="left-sidebar"></tutorial-sidebar>
+    </keep-alive>
+    
     <div class="content">
       <!--    <h2>{{ selectData }}</h2>-->
       <div class="lists" v-for="article in listData" :key="article.id">

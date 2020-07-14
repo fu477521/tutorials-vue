@@ -1,13 +1,17 @@
 <template>
   <div class="tutorials">
     <div class="header">
-      <tutorial-header></tutorial-header>
+      <keep-alive>
+        <tutorial-header></tutorial-header>
+      </keep-alive>
     </div>
       
     <router-view name = "main" id="main"></router-view>
 
     <div class="footer">
-      <tutorial-footer></tutorial-footer>
+      <keep-alive>
+        <tutorial-footer></tutorial-footer>
+      </keep-alive>
     </div>
 <!--    <router-view name = "footer" class="footer"></router-view>-->
   </div>

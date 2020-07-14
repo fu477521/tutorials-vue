@@ -1,6 +1,9 @@
 <template>
   <div class="container">
-    <tutorial-sidebar class="left-sidebar"></tutorial-sidebar>
+    <keep-alive>
+      <tutorial-sidebar class="left-sidebar"></tutorial-sidebar>
+    </keep-alive>
+    
     <div class="content">
       <div class="lists">
         <div  class="article-title"><h2><span>{{ articleData.title }}</span></h2></div>

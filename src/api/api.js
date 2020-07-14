@@ -3,7 +3,7 @@ import axios from 'axios'
 //那么在其他vue组件中就可以this.$axios调用使用
 
 // let TutorialsHost = 'http://127.0.0.1:8100'
-let TutorialsHost = 'http://47.107.186.243:8100'
+let TutorialsHost = 'http://47.107.186.243'
 // let host = 'http://47.107.186.243:8000'
 
 // 获取商品类别信息

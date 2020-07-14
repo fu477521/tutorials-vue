@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
+// import Home from './views/Home.vue'
 
 // import forumsBase from './views/forums/forums_base'
 // import forumsIndex from './views/forums/Index'
@@ -14,16 +14,16 @@ const tutorialIndex = () => import('@/views/tutorials/Index')
 const tutorialList = () => import('@/views/tutorials/List')
 const tutorialDetail = () => import('@/views/tutorials/Detail')
 
-const userInfo = () => import('@/views/users/userInfo')
-const Login = () => import('@/views/users/Login')
-const Register = () => import('@/views/users/Register')
-const FindPwd = () => import('@/views/users/FindPwd')
+// const userInfo = () => import('@/views/users/userInfo')
+// const Login = () => import('@/views/users/Login')
+// const Register = () => import('@/views/users/Register')
+// const FindPwd = () => import('@/views/users/FindPwd')
 
 // 定义测试路由
 const Category = () => import('@/components/CategorySelect')
 const Edit = () => import('@/components/Edit')
 const Detail = () => import('@/components/Detail')
-const HelloWorld = () => import('@/components/HelloWorld')
+// const HelloWorld = () => import('@/components/HelloWorld')
 
 // import Comments from '../components/Comments'
 // import userInfo from '../views/users/userInfo'
@@ -45,13 +45,6 @@ export default new Router({
   mode: 'hash',
   base: process.env.BASE_URL,
   routes: [
-    {
-      path: '*',
-      component: HelloWorld,
-      meta: {
-          title: '404 未找到',
-      },
-    },
     {
       path: '/',
       name: 'home',
@@ -299,27 +292,27 @@ export default new Router({
     //     }
     //   ]
     // },
-    {
-      path: '/login',
-      name: 'login',
-      component: Login
-    },
-    {
-      path: '/register',
-      name: 'register',
-      component: Register
-    },
-    {
-      path: '/findpwd',
-      component: FindPwd
-    },
-    {
-      path: '/userinfo',
-      component: userInfo
-    },
-    {
-      path: '/test',
-      component: Category
-    }
+    // {
+    //   path: '/login',
+    //   name: 'login',
+    //   component: Login
+    // },
+    // {
+    //   path: '/register',
+    //   name: 'register',
+    //   component: Register
+    // },
+    // {
+    //   path: '/findpwd',
+    //   component: FindPwd
+    // },
+    // {
+    //   path: '/userinfo',
+    //   component: userInfo
+    // },
+    // {
+    //   path: '/test',
+    //   component: Category
+    // }
   ]
 })

@@ -18,7 +18,7 @@
     import EditorMarkdown from "./editor_components/EditorMarkdown";
     import EditorRichText from "./editor_components/EditorRichText";
     // import EditorRichText from "./editor_components/tinymce_test";
-    import {getArticle, updateArticle, createArticle, createNote, createPost} from '../api/api'
+    import {getArticle, updateArticle, createArticle} from '../api/api'
     export default {
         name: "Edit",
         data () {

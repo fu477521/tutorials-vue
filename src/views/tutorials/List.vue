@@ -59,8 +59,8 @@ export default {
         category_id: this.categoryId
       })
         .then((response) => {
-        console.log('===>', response.data)
-        this.listData = response.data.results
+        // console.log('===>', response.data)
+        this.listData = response.data.data
         this.total = response.data.total
       })
     },

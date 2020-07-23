@@ -33,7 +33,7 @@
 	  },
 	  watch: {
 	  	TPageData: function(newData, oldData){
-	  	  listArticle({turn_page: newData})
+	  	  listArticle(newData)
 	  	  .then((response) => {
             // console.log(response.data)
             this.nextData = response.data.next || [0, '没有下一篇了'] //{'id': 0, 'title': '没有下一篇了'}

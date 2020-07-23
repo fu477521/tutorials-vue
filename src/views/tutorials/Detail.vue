@@ -138,7 +138,7 @@
         }
       },
       TurnPageData () {
-        return {article_id: this.articleId, category_id: this.categoryId}
+        return {article_id: this.articleId, category_id: this.categoryId, is_turnpage: true}
       }
     },
     methods: {
